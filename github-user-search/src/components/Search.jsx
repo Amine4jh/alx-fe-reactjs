@@ -36,11 +36,12 @@ const Search = () => {
     </form>
 
     {loading && <p>Loading...</p>}
-    {error && <p>Looks like we can't find the user.</p>}
+    {error && <p>Looks like we cant find the user.</p>}
     {user && (
       <div style={{ margin: '1rem', padding: '0.5rem', border: '1px solid #333' }}>
         <img src={user.avatar_url} alt="Avatar" width='150px' style={{ borderRadius: '50%' }} />
-        <h3><a href={user.html_url} target="_blank">{user.name}</a></h3>
+        <h3><a href={user.html_url} target="_blank">{user.login}</a></h3>
+        <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Id:</strong> {user.id}</p>
         <p><strong>Location:</strong> {user.location}</p>
         <p><strong>Followers:</strong> {user.followers}</p>
