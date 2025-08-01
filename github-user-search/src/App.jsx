@@ -11,7 +11,6 @@ const App = () => {
             <>
               <Home />
               <div style={{ padding: '1rem' }}>
-                <h3>Github User Search</h3>
                 <Search />
               </div>
             </>
