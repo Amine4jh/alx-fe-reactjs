@@ -12,3 +12,10 @@ A simple and responsive React application that allows users to search for GitHub
 - 🎨 Fully responsive and styled with Tailwind CSS
 - 🔄 Displays loading and error states
 - 📄 Displays user avatar, username, profile link, and other key details
+
+---
+
+## 💻 Website Link
+
+👇🏼 Click The Link To Explore The Website 👇🏼
+- https://github-user-search-eosin.vercel.app/
