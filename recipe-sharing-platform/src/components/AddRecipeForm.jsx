@@ -57,7 +57,7 @@ const AddRecipeForm = ({ onAddRecipe }) => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-lg rounded-2xl p-6 max-w-xl mx-auto"
+        className="bg-white shadow-lg rounded-2xl p-6 max-w-xl mx-auto sm:w-md"
       >
         {/* Title */}
         <div className="mb-4">
