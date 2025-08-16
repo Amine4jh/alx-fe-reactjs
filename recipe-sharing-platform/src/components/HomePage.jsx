@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import recipeData from "../data.json";
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch("/data.json") // relative path from public or src
-      .then((res) => res.json())
-      .then((data) => setRecipes(data))
-      .catch((err) => console.error("Error loading data:", err));
+    setRecipes(recipeData);
   }, []);
 
   return (
@@ -17,7 +15,7 @@ const HomePage = () => {
       </h1>
 
       {/* Responsive Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
         {recipes.map((recipe) => (
           <div
             key={recipe.id}
@@ -31,12 +29,12 @@ const HomePage = () => {
             <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{recipe.title}</h2>
               <p className="text-gray-600 mb-4">{recipe.summary}</p>
-              <a
+              {/* <a
                 href={`/recipe/${recipe.id}`}
                 className="text-blue-500 font-medium hover:underline"
               >
                 View Recipe →
-              </a>
+              </a> */}
             </div>
           </div>
         ))}
